@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validating Forms with JS</title>
+	<style >
+		
+		#wri{
+			float:right;
+		}
+	</style>
+</head>
+<body>
+<form action="processData.html" onsubmit="return validateData();">
+	<input type="text" id="userName" placeholder="Your Name" required><span style="color: red">*</span><br><p id="wri"></p>
+	<input type="text" id="userAddress" placeholder="Your Address" required><span style="color: red">*</span><br><p id="wri"></p>
+	<input type="text" id="userPhone" placeholder="Your Phone" required><span style="color: red">*</span><br><p id="wri"></p>
+	<input type="email" id="userEmailId"  placeholder="Your Email" required><span style="color: red">*</span><br><p id="wri"></p>
+Your favorite SmartPhone Brands<br> <p><input  type="checkbox" > IPhone
+<input type="checkbox" >OnePlus
+<input type="checkbox" >Realme
+<input type="checkbox" >Oppo
+<input type="checkbox" >Vivo
+<input type="checkbox" >Xiaomi<br><p></p>
+
+Smart Phone You Prefer To Use<br><p>
+<input type="radio" name="Smart Phone Brand">IPhone
+<input type="radio" name="Smart Phone Brand">OnePlus
+<input type="radio" name="Smart Phone Brand">Realme
+<input type="radio" name="Smart Phone Brand">Oppo
+<input type="radio" name="Smart Phone Brand">Vivo
+<input type="radio" name="Smart Phone Brand">Xiaomi<br><p></p>
+
+
+
+
+	
+	<input type="submit" value="REGISTER">
+</form>
+
+
+
+<script type="text/javascript">
+	console.log("dafasdsf")
+	function prewrite(msg){
+		document.getElementById("wri").innerHTML=msg;
+	}
+		
+
+		function validateData(){
+      console.log("check-1");
+      var userName = document.getElementById("userName");
+      var userAddress = document.getElementById("userAddress");
+      var userPhone = document.getElementById("userPhone");
+      var userEmailId = document.getElementById("userEmailId");
+      var favoritePhone= document.getElementsByName("favoritePhone");
+      if(!userName.value.length || (!isNaN(userName.value))){
+        preWrite("The Name fied is Empty");
+        document.getElementById("nameme").innerHTML = "<img src='nature.jpeg'>";
+        username.focus();
+        return false;
+      }else if(!userAddress.value.length){
+        preWrite("Looks like you left an empty address fieldset");
+        userAddress.focus();
+        return false;
+      }else if(userPhone.value.length!=10 || (isNaN(userPhone.value))){
+        preWrite("looks like you have missed something in the name feld you cannot have alpha or the number must be numeric in nature");
+        userPhone.value = "";
+        userPhone.focus();
+        return false;
+      }else if(!userEmailId.value.length){
+        preWrite("looks like you have left the email fied empty");
+        userEmailId.focus();
+        return false;
+      }else{
+        var isValid;
+        console.log(favoritePhone.length);
+        for(var i; i<favoritePhonea.length ; i++){
+          if(favoritePhone[i]== checked) isValid=true;
+        }
+       favoritePhone.focus();
+        return isValid;
+      }
+      return true;
+    }
+
+  </script>
+</html>\

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A Menu with CSS</title>
+</head>
+<body>
+<style type="text/css">
+	#container{
+		margin: 0;
+		padding: 0;
+	}
+	nav{
+		width: 240px;
+		height: 100%;
+		background-color: #bd4112;
+		position: absolute;
+		top: 10%
+	}
+	nav > ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	nav > ul > li > a{
+		text-decoration: none;
+		color: #fff;
+		padding: 15px 20px;
+		font-size: 28px;
+		display: block;
+		transition: .4s all ease;
+	}
+	nav > ul > li > a:hover{
+		border-bottom: 1px solid #fff;
+		background-color: #bd1002;
+	}
+
+</style>
+
+
+<div id="container">
+	<nav>
+		<ul>
+			<li><a href="#">Headlines</a></li>
+			<li><a href="#">World</a></li>
+			<li><a href="#">Asia</a></li>
+			<li><a href="#">Europe</a></li>
+			<li><a href="#">Nature</a></li>
+		</ul>
+	</nav>
+</div>
+</body>
+</html>
